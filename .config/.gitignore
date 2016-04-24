@@ -1,0 +1,14 @@
+*
+!.gitignore 
+!bspwm/
+!bspwm/*
+!cmus/
+!cmus/*
+!dunst/
+!dunst/*
+!sublime-text-3/
+!sublime-text-3/*
+!sxhkd/
+!sxhkd/*
+
+*.swp

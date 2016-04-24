@@ -1,0 +1,42 @@
+# File locations
+PANEL_FIFO=/tmp/panel-fifo
+MSGFILE=$HOME/.weechat/highlights.txt
+NEWMAILDIR=$HOME/mail/gmail/gmail/new
+
+# Hardware
+WIFI_INTERFACE="wlp2s0"
+
+# Refresh times in seconds
+REFRESH_CLOCK=1
+REFRESH_VOLUME=0.5
+REFRESH_EMAIL=60
+REFRESH_MEDIA=0.1
+
+# Dimensions
+PANEL_HEIGHT=24
+PANEL_WIDTH=2528
+PANEL_TOP_OFFSET=4
+PANEL_LEFT_OFFSET=16
+
+# Fonts
+PANEL_FONT="Source Sans Pro Semibold:size=11"
+ICON_FONT="FontAwesome:size=13"
+ICON_FONT2="fontcustom:size=13"
+
+# Icons
+#ICON_CLOCK='\uf017 '
+#ICON_DATE='\uf073  '
+ICON_VOLUME_HIGH='\uf028'
+ICON_VOLUME_LOW='\uf027'
+ICON_VOLUME_MUTE='\uf026'
+ICON_CHAT_NONE='\uf0e5'
+ICON_CHAT_NEW='\uf0e6'
+ICON_EMAIL_NONE='\uf003'
+ICON_EMAIL_NEW='\uf0e0'
+ICON_NEWS_NONE='\uf1ea'
+ICON_NEWS_NEW='\uf1ea'
+ICON_WIFI_CONNECTED='\uf1eb'
+ICON_WIFI_DISCONNECTED='\uf05e'
+ICON_MEDIA_BACK='\uf19c'
+ICON_MEDIA_FORWARD='\uf17c'
+ICON_MEDIA_PLAY='\uf198'
