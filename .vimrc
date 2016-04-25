@@ -16,6 +16,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'mhinz/vim-startify'
 Plugin 'kshenoy/vim-signature'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'duff/vim-scratch'
 
 call vundle#end()
 filetype plugin indent on
