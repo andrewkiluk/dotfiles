@@ -1,0 +1,20 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"enable_tab_scrolling": false,
+	"font_face": "Inconsolata",
+	"font_options":
+	[
+		"subpixel_antialias",
+		"no_round"
+	],
+	"font_size": 11,
+	"ignored_packages":
+	[
+	],
+	"scroll_past_end": true,
+	"tab_completion": false,
+	"tab_size": 2,
+	"theme": "Numix Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}
