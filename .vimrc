@@ -8,6 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'wincent/command-t'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
@@ -17,6 +18,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'kshenoy/vim-signature'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'duff/vim-scratch'
+Plugin 'itchyny/vim-haskell-indent'
 
 call vundle#end()
 filetype plugin indent on
