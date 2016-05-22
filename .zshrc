@@ -51,16 +51,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-#     _    _ _
-#    / \  | (_) __ _ ___  ___  ___
-#   / _ \ | | |/ _` / __|/ _ \/ __|
-#  / ___ \| | | (_| \__ \  __/\__ \
-# /_/   \_\_|_|\__,_|___/\___||___/
-#
-alias plz=sudo
-alias steam='LD_PRELOAD="/usr/lib32/libasound.so.2:/usr/lib/libasound.so.2" steam'
-alias cmus-attach='tmux a -t cmux'
-
 #  _____            _                                      _
 # | ____|_ ____   _(_)_ __ ___  _ __  _ __ ___   ___ _ __ | |_
 # |  _| | '_ \ \ / / | '__/ _ \| '_ \| '_ ` _ \ / _ \ '_ \| __|
@@ -74,9 +64,31 @@ alias cmus-attach='tmux a -t cmux'
 export TERM="xterm-256color"
 export LANG=en_US.UTF-8
 export EDITOR='vim'
-export PATH=$PATH:/home/andrew/.scripts:/home/andrew/.gocode/bin
+export PATH=$PATH:/home/andrew/.scripts:/home/andrew/.gocode/bin:/home/andrew/.local/bin
 
-
+#  ______                _   _                 
+# |  ____|              | | (_)                
+# | |__ _   _ _ __   ___| |_ _  ___  _ __  ___ 
+# |  __| | | | '_ \ / __| __| |/ _ \| '_ \/ __|
+# | |  | |_| | | | | (__| |_| | (_) | | | \__ \
+# |_|   \__,_|_| |_|\___|\__|_|\___/|_| |_|___/
+#                                              
 function name() {
 	find . -name \*"$1"\* 
 }
+
+function new-alias() {
+  local last_command=$(echo `history |tail -n1 |head -n1` | sed 's/[0-9]* //')
+  echo alias $1="'""$last_command""'" >> ~/.zshrc
+  . ~/.zshrc
+}
+
+#     _    _ _
+#    / \  | (_) __ _ ___  ___  ___
+#   / _ \ | | |/ _` / __|/ _ \/ __|
+#  / ___ \| | | (_| \__ \  __/\__ \
+# /_/   \_\_|_|\__,_|___/\___||___/
+#
+alias plz=sudo
+alias steam='LD_PRELOAD="/usr/lib32/libasound.so.2:/usr/lib/libasound.so.2" steam'
+alias cmus-attach='tmux a -t cmux'
