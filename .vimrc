@@ -19,14 +19,32 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'duff/vim-scratch'
 Plugin 'itchyny/vim-haskell-indent'
+Plugin 'wellle/targets.vim'
+Plugin 'vim-scripts/ReplaceWithRegister'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'godlygeek/tabular'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'eagletmt/ghcmod-vim'
 
 call vundle#end()
 filetype plugin indent on
 
 runtime! plugin/sensible.vim
 
+"Set commands for aligning Haskell
+let g:haskell_tabular = 1
+vmap a= :Tabularize /=<CR>
+vmap a; :Tabularize /::<CR>
+vmap a- :Tabularize /-><CR>
+
 "Line numbers
 set number
+
+" NerdTree command
+map <Leader>n :NERDTreeToggle<CR>
 
 "Allow toggling line numbers
 :nmap <C-L> :set invnumber<CR>
