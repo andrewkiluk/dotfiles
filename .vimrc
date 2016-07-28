@@ -82,6 +82,13 @@ autocmd VimLeave * let &t_me="\<Esc>[4 q"
 "Leader-s replaces word under cursor
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
+"vim-airline configuration
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
