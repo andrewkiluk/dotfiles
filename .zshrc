@@ -47,9 +47,14 @@ DISABLE_UPDATE_PROMPT=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git, history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
+
+source .config/fzy-key-bindings.zsh
+
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down]]]]
 
 #  _____            _                                      _
 # | ____|_ ____   _(_)_ __ ___  _ __  _ __ ___   ___ _ __ | |_
