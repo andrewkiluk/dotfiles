@@ -9,12 +9,15 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'wincent/command-t'
+Plugin 'tpope/vim-speeddating'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-jdaddy'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
 Plugin 'vim-airline/vim-airline'
-Plugin 'mhinz/vim-startify'
 Plugin 'kshenoy/vim-signature'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'duff/vim-scratch'
@@ -28,28 +31,34 @@ Plugin 'godlygeek/tabular'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'eagletmt/ghcmod-vim'
+Plugin 'michaeljsmith/vim-indent-object'
 
 call vundle#end()
 filetype plugin indent on
 
 runtime! plugin/sensible.vim
 
-"Set commands for aligning Haskell
-let g:haskell_tabular = 1
-vmap a= :Tabularize /=<CR>
-vmap a; :Tabularize /::<CR>
-vmap a- :Tabularize /-><CR>
-
 "Line numbers
 set number
+set relativenumber
 
 " NerdTree command
 map <Leader>n :NERDTreeToggle<CR>
 
-"Allow toggling line numbers
-:nmap <C-L> :set invnumber<CR>
+" Set search highlighting to ON
+ set hlsearch
 
-" Buffer switching using Cmd-arrows in Mac and Alt-arrows in Linux
+"Allow toggling line numbers
+:nmap <C-L> :set invnumber invrelativenumber<CR>
+
+"Switch between buffers without saving
+set hidden
+
+" Persistent undo
+set undofile
+set undodir=~/.vim/undodir
+
+" Buffer switching using Cmd-arrows 
 :nnoremap <C-Right> :bnext<CR>
 :nnoremap <C-Left> :bprevious<CR>
 
@@ -76,6 +85,7 @@ let &t_EI .= "\<Esc>[2 q"
 " 5 -> blinking vertical bar
 " 6 -> solid vertical bar
 
+
 " Reset cursor on exit
 autocmd VimLeave * let &t_me="\<Esc>[4 q"
 
@@ -89,6 +99,9 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
+
+" Keep lines between cursor and edge when scrolling
+set scrolloff=8
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %

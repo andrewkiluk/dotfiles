@@ -8,9 +8,6 @@ super + alt + Escape
 super + w
 	bspc node -c
 
-#super + t
-	#bspc desktop -l next
-
 super + b
 	bspc desktop -B
 
@@ -154,3 +151,8 @@ XF86AudioNext
 XF86AudioPrev
 	cmus-remote -r
   
+XF86AudioRaiseVolume
+	amixer set Master 5%+
+
+XF86AudioLowerVolume
+	amixer set Master 5%-
