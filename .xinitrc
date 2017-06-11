@@ -9,7 +9,7 @@ redshift -l 40.815472:-73.959071 &
 numlockx &
 dropbox & 
 tmux new -d -s cmux; tmux send-keys -t cmux 'cmus' C-m # Start cmus in tmux session
-compton -CG --active-opacity 1.0 --shadow-ignore-shaped & 
+compton &
 
 exec xmonad
 #exec bspwm

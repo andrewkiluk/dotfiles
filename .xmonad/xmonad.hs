@@ -2,6 +2,8 @@ import XMonad
 
 import XMonad.Actions.CycleWS (prevWS, nextWS, shiftToNext, shiftToPrev)
 
+import XMonad.Config.Desktop (desktopConfig)
+
 import XMonad.Hooks.ManageDocks(avoidStruts, docksEventHook)
 import XMonad.Hooks.DynamicLog 
 import XMonad.Hooks.EwmhDesktops (ewmh, ewmhDesktopsEventHook)
@@ -44,7 +46,7 @@ main = do
                                                      , D.nameReplaceExisting
                                                      , D.nameDoNotQueue
                                                      ]
-    xmonad . ewmh . fullscreenSupport $ def
+    xmonad . ewmh . fullscreenSupport $ desktopConfig
             { borderWidth        = border
             , focusFollowsMouse  = False
             , clickJustFocuses   = False
@@ -133,7 +135,7 @@ myKeys =
     , ((myModMask, xK_j), focusDown)
     , ((myModMask, xK_k), focusUp)
     , ((myModMask, xK_m), focusMaster)
-    , ((myModMask, xK_f), sendMessage $ Toggle FULL)
+    , ((myModMask, xK_f), sequence_ [ (withFocused $ windows . W.sink), sendMessage $ Toggle FULL])
     ]
 
 myDbusHook :: D.Client -> PP

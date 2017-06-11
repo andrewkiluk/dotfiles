@@ -101,3 +101,4 @@ alias plz=sudo
 alias steam='LD_PRELOAD="/usr/lib32/libasound.so.2:/usr/lib/libasound.so.2" steam'
 alias cmus-attach='tmux a -t cmux'
 alias weather='curl wttr.in'
+alias compton='compton -bCG --active-opacity 1.0 --shadow-ignore-shaped'
