@@ -1,7 +1,19 @@
+# This is Git's per-user configuration file.
+[core]
+    autocrlf = input
+    editor = /usr/bin/vim
+[color]
+    ui = true
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 [user]
 	email = andrew.kiluk@gmail.com
 	name = Andrew Kiluk
 [push]
-	default = current
+    default = current
+[rerere]
+    enabled = true
+[rebase]
+    autostash = true
+[apply]
+    whitespace = nowarn

@@ -47,14 +47,17 @@ DISABLE_UPDATE_PROMPT=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, history-substring-search)
+plugins=(git history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
 source .config/fzy-key-bindings.zsh
 
 bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down]]]]
+bindkey "^[[B" history-substring-search-down
+
+bindkey "^[OA" history-substring-search-up
+bindkey "^[OB" history-substring-search-down
 
 #  _____            _                                      _
 # | ____|_ ____   _(_)_ __ ___  _ __  _ __ ___   ___ _ __ | |_
@@ -97,3 +100,4 @@ function new-alias() {
 alias plz=sudo
 alias steam='LD_PRELOAD="/usr/lib32/libasound.so.2:/usr/lib/libasound.so.2" steam'
 alias cmus-attach='tmux a -t cmux'
+alias weather='curl wttr.in'

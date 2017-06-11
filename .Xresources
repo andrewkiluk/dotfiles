@@ -1,13 +1,16 @@
-!#include "/home/andrew/.colors/earth"
-#include "/home/andrew/.colors/sero"
-!#include "/home/andrew/.colors/blush"
-!#include "/home/andrew/.colors/light"
-
+#include "/home/andrew/.colors/solarized"
 
 URxvt.cursorUnderline: true
 
+URxvt.depth: 32
+URxvt*background: rgba:0000/2b00/3600/eeee
+
+URxvt.intensityStyles: false
+
 URxvt.scrollBar: false
 URxvt.scrollTtyOutput: true
+
+URxvt.urgentOnBell: true
 
 ! enables scrolling with Shift + Up/Down
 URxvt.keysym.Shift-Up: command:\033]720;1\007
@@ -15,23 +18,29 @@ URxvt.keysym.Shift-Down: command:\033]721;1\007
 
 ! enables copy/paste
 URxvt.iso14755 : false
-URxvt.perl-ext-common: clipboard
+URxvt.perl-ext-common: clipboard,font-size
 URxvt.keysym.C-C:   perl:clipboard:copy
 URxvt.keysym.C-V:   perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 
+! font-size mappings
+URxvt.keysym.Control-0:       font-size:reset
+URxvt.keysym.Control-minus:   font-size:decrease
+URxvt.keysym.Control-equal:   font-size:increase
+URxvt.font-size.step: 4
+
 ! arrow keys
-URxvt.keysym.Control-Up:	\033[1;5A
-URxvt.keysym.Control-Down:	\033[1;5B
-URxvt.keysym.Control-Left:	\033[1;5D
-URxvt.keysym.Control-Right:	\033[1;5C
+!URxvt.keysym.Control-Up:	\033[1;5A
+!URxvt.keysym.Control-Down:	\033[1;5B
+!URxvt.keysym.Control-Left:	\033[1;5D
+!URxvt.keysym.Control-Right:	\033[1;5C
 
 ! set font
-URxvt.font: xft:droid sans mono:size=10:antialias=true
+URxvt.font: xft:droid sans mono:size=10:antialias=true, xft:Inconsolata for Powerline, FontAwesome:pixelsize=10
 
 URxvt.letterSpace: 0
 
-.URxvt.internalBorder: 4
+!.URxvt.internalBorder: 4
 
 *VT100.colorBDMode:                   true
 *VT100.colorBD:                       red

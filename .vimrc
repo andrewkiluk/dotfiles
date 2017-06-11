@@ -32,6 +32,8 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'dominikduda/vim_current_word'
 
 call vundle#end()
 filetype plugin indent on
@@ -70,9 +72,13 @@ set softtabstop=4         "Insert 4 spaces when tab is pressed
 set expandtab             "Always uses spaces instead of tab characters
 
 syntax enable
-colorscheme BusyBee
+set background=dark
+colorscheme solarized
 
 let g:CommandTHighlightColor='DiffAdd'
+
+" Don't highlight current word
+let g:vim_current_word#highlight_current_word = 0
 
 " Set cursor style
 let &t_SI .= "\<Esc>[6 q"

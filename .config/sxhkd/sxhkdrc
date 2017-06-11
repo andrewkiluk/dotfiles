@@ -2,111 +2,113 @@
 # bspwm hotkeys
 #
 
-super + alt + Escape
-	bspc quit
+## super + alt + Escape
+## 	bspc quit
+## 
+## super + w
+## 	bspc node -c
+## 
+## super + b
+## 	bspc desktop -B
+## 
+## super + {t,shift + t,s,f}
+##         bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+## #super + {s,f}
+## 	#bspc node -t {floating,fullscreen}
+## 
+## super + {grave,Tab}
+## 	bspc {window,desktop} -f last
+## 
+## super + apostrophe
+## 	bspc window -s last
+## 
+## super + {o,i}
+## 	bspc control --record-history off; \
+## 	bspc window {older,newer} -f; \
+## 	bspc control --record-history on
+## 
+## super + y
+## 	bspc window -w last.manual
+## 
+## super + m
+## 	bspc window -s biggest
+## 
+## super + {_,shift + }c
+## 	bspc window -f {next,prev}
+## 
+## super + {comma,period}
+## 	bspc desktop -C {backward,forward}
+## 
+## super + bracket{left,right}
+## 	bspc desktop -f {prev,next}
+## 
+## super + brace{left,right}
+## 	W=$(bspc query --nodes --node focused);	bspc node -d {prev; bspc desktop -f prev; bspc node -f $W, next; bspc desktop -f next; bspc node -f $W}
+## 
+## ###
+## # vim versions
+## ###
+## 
+##   # focus the node in the given direction
+## super + {_,shift + }{h,j,k,l}
+## 	bspc node -{f,s} {west,south,north,east}
+## 
+##   # set next split direction
+## super + ctrl + {h,j,k,l}
+## 	bspc node -p {west,south,north,east}
+## ###
+## # arrow versions
+## ###
+## 
+##   # focus the node in the given direction
+## super + {_,shift + }{Left,Down,Up,Right}
+## 	bspc node -{f,s} {west,south,north,east}
+## 
+##   # preselect next split direction
+## super + ctrl + {Left,Down,Up,Right}
+## 	bspc node -p {west,south,north,east}
+## 
+## #
+## 
+##   # cancel preselect split direction
+## super + ctrl + {_,shift + }space
+## 	bspc {node -p cancel,desktop -c}
+## 
+##   # nudge window sizes
+## super + alt + {Left,Down,Up,Right}
+## 	bspc node -e {left -10,down -10,up -10,right -10}
+## 
+## super + alt + shift + {Left,Down,Up,Right}
+## 	bspc node -e {left +10,down +10,up +10,right +10}
+## 
+## super + ctrl + {1-9}
+## 	bspc node -r 0.{1-9}
+## 
+## super + {_,shift + }{1-9,0}
+## 	bspc {desktop -f,node -d} ^{1-9,10}
+## 
+## ~button1
+## 	bspc pointer -g focus
+## 
+## super + button{1-3}
+## 	bspc pointer -g {move,resize_side,resize_corner}
+## 
+## super + !button{1-3}
+## 	bspc pointer -t %i %i
+## 
+## super + @button{1-3}
+## 	bspc pointer -u
+## 
+## super + shift + {o,p}
+## 	bspc desktop -R {270,90}
+## 
+## super + ctrl + alt + p
+## 	bspc node -t pseudo_tiled
+## 
+## super + ctrl + e
+## 	bspc node -k
 
-super + w
-	bspc node -c
 
-super + b
-	bspc desktop -B
-
-super + {t,shift + t,s,f}
-        bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-#super + {s,f}
-	#bspc node -t {floating,fullscreen}
-
-super + {grave,Tab}
-	bspc {window,desktop} -f last
-
-super + apostrophe
-	bspc window -s last
-
-super + {o,i}
-	bspc control --record-history off; \
-	bspc window {older,newer} -f; \
-	bspc control --record-history on
-
-super + y
-	bspc window -w last.manual
-
-super + m
-	bspc window -s biggest
-
-super + {_,shift + }c
-	bspc window -f {next,prev}
-
-super + {comma,period}
-	bspc desktop -C {backward,forward}
-
-super + bracket{left,right}
-	bspc desktop -f {prev,next}
-
-super + brace{left,right}
-	W=$(bspc query --nodes --node focused);	bspc node -d {prev; bspc desktop -f prev; bspc node -f $W, next; bspc desktop -f next; bspc node -f $W}
-
-###
-# vim versions
-###
-
-  # focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
-
-  # set next split direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-###
-# arrow versions
-###
-
-  # focus the node in the given direction
-super + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
-
-  # preselect next split direction
-super + ctrl + {Left,Down,Up,Right}
-	bspc node -p {west,south,north,east}
-
-#
-
-  # cancel preselect split direction
-super + ctrl + {_,shift + }space
-	bspc {node -p cancel,desktop -c}
-
-  # nudge window sizes
-super + alt + {Left,Down,Up,Right}
-	bspc node -e {left -10,down -10,up -10,right -10}
-
-super + alt + shift + {Left,Down,Up,Right}
-	bspc node -e {left +10,down +10,up +10,right +10}
-
-super + ctrl + {1-9}
-	bspc node -r 0.{1-9}
-
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} ^{1-9,10}
-
-~button1
-	bspc pointer -g focus
-
-super + button{1-3}
-	bspc pointer -g {move,resize_side,resize_corner}
-
-super + !button{1-3}
-	bspc pointer -t %i %i
-
-super + @button{1-3}
-	bspc pointer -u
-
-super + shift + {o,p}
-	bspc desktop -R {270,90}
-
-super + ctrl + alt + p
-	bspc node -t pseudo_tiled
-
-super + ctrl + e
-	bspc node -k
 #
 # wm independent hotkeys
 #
@@ -140,6 +142,9 @@ super + shift + backslash
 ctrl + space
 	dmenu_run -b -q -fn 'Source Code Pro-9'
 
+# targeted screenshot
+shift + Print
+        DATE=`date +%d%m%Y_%H%M%S`; xsnap -nogui -file $HOME/xsnap$DATE
 
 # cmus control
 XF86AudioPlay
