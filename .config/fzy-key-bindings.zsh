@@ -12,9 +12,7 @@ if [[ $- == *i* ]]; then
   }
 
 __fsel() {
-  #local cmd="ag --hidden -l -g \"\""
-  # Can't get this one working....?
-  local cmd="find ."
+  local cmd="rg --files --hidden"
   setopt localoptions pipefail 2> /dev/null
   eval "$cmd | $(__fzycmd)" | while read item; do
     echo -n "${(q)item} "

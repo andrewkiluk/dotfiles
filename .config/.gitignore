@@ -11,5 +11,6 @@
 !sxhkd/
 !sxhkd/*
 !fzy-key-bindings.zsh
+!polybar
 
 *.swp

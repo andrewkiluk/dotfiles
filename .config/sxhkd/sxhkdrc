@@ -144,9 +144,12 @@ ctrl + space
 
 # targeted screenshot
 shift + Print
-        DATE=`date +%d%m%Y_%H%M%S`; xsnap -nogui -file $HOME/xsnap$DATE
+	DATE=`date +%d%m%Y_%H%M%S`; xsnap -nogui -file $HOME/xsnap$DATE
 
 # cmus control
+super + c
+	urxvt --hold -e tmux a -t cmux
+
 XF86AudioPlay
 	~/.config/cmus/startup.sh
 
